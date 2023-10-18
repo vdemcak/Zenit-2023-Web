@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Jost", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer components {
+  .button {
+    @apply hover:text-darkBlue bg-[#06A3DA] px-5 py-2 text-sm font-medium text-white transition-colors duration-200 ease-in-out hover:bg-[#F57E57];
+  }
+
+  .button.large {
+    @apply px-10 py-3 text-base;
+  }
+
+  .button.orange {
+    @apply bg-orange hover:bg-skyBlue text-darkBlue;
+  }
+
+  .button.white {
+    @apply text-darkBlue hover:bg-orange bg-white hover:text-white;
+  }
+
+  .button.dark {
+    @apply bg-darkBlue hover:bg-orange text-white;
+  }
+}
+
+@layer utilities {
+  .content-wrapper {
+    @apply mx-auto w-[1320px];
+  }
+
+  .section-spacing {
+    @apply mt-20;
+  }
+
+  .card {
+    @apply cursor-pointer transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-lg;
+  }
+}

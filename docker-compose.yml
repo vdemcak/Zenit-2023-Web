@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+    db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_DATABASE: "zenitSK40"
+            MYSQL_USER: "zenituser40"
+            MYSQL_PASSWORD: "zenitpass40"
+            MYSQL_ROOT_PASSWORD: "zenitpass40"
+        ports:
+            - "3306:3306"
+        expose:
+            - "3306"
+        volumes:
+            - ./.mysql-data/:/var/lib/mysql
+volumes:
+    my-db:
